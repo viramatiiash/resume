@@ -1,0 +1,424 @@
+@import './styles/mixins';
+@import './styles/variables';
+
+.resume {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1320px;
+  @include flex;
+  background-color: $c-resume;
+  box-shadow: 5px 5px 10px rgb(65, 65, 65), -5px -5px 10px rgb(65, 65, 65);
+
+  @media screen and (max-width: 650px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.firstContainer {
+  background-color: $c-white;
+
+  @media screen and (max-width: 650px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.imgContainer {
+  width: 100%;
+  max-width: 700px;
+
+  @media screen and (max-width: 649px) {
+    display: none;
+  }
+}
+
+.nameGroup {
+  display: flex;
+  justify-content: start;
+
+  @media screen and (max-width: 581px) {
+    display: block;
+  }
+}
+
+.imgContainerMobile {
+  width: 100%;
+  max-width: 300px;
+
+  @media screen and (min-width: 650.9px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 581px) {
+    margin: 0 auto;
+    max-width: 570px;
+  }
+}
+
+.mainHeading {
+  margin-left: 70px;
+  font-size: $fs-main-heading;
+
+  @media screen and (min-width: 950px) and (max-width: 1210px) {
+    font-size: $fs-main-heading-mobile;
+  }
+
+  @media screen and (min-width: 800px) and (max-width: 950px) {
+    font-size: $fs-main-little-heading;
+    margin-left: 40px;
+  }
+  @media screen and (min-width: 750px) and (max-width: 800px) {
+    font-size: $fs-main-very-little-heading;
+    margin-left: 30px;
+  }
+  @media screen and (min-width: 650px) and (max-width: 750px) {
+    font-size: 28px;
+    margin-left: 30px;
+  }
+
+  @media screen and (min-width: 581px) and (max-width: 650px) {
+    padding: 30px;
+    font-size: 28px;
+    margin-left: 15px;
+    font-size: $fs-heading;
+    line-height: 38px;
+    margin-top: 60px;
+  }
+
+  @media screen and (min-width: 430px) and (max-width: 581px) {
+    display: flex;
+    gap: 5px;
+    padding: 30px;
+    margin: 0;
+    font-size: $fs-main-very-little-heading;
+    line-height: 38px;
+    margin-top: 40px;
+  }
+
+    @media screen and (max-width: 430px) {
+    display: flex;
+    gap: 5px;
+    padding: 30px;
+    font-size: 28px;
+    margin: 0;
+    line-height: 38px;
+    margin-top: 40px;
+  }
+}
+
+.littleHeading {
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 581px) and (max-width: 650px) {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 15px;
+    font-size: $fs-little-heading;
+    line-height: 28px;
+  }
+
+  @media screen and (max-width: 581px) {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 15px;
+    font-size: $fs-little-heading;
+    line-height: 28px;
+    margin-bottom: 15px;
+  }
+}
+
+.heading {
+  font-size: $fs-heading;
+  color: $c-heading;
+  background-color: $c-box;
+  width: fit-content;
+  padding: 4px 20px;
+  margin-bottom: 16px;
+  font-weight: 600;
+
+  @media screen and (max-width: 1350px) {
+    font-size: $fs-little-heading;
+  }
+}
+
+.name {
+  padding: 2px 20px;
+  color: $c-heading;
+  background-color: $c-box;
+
+  @media screen and (max-width: 650px ) {
+    padding: 2px 14px;
+  }
+}
+
+.surname {
+  display: inline-block;
+  margin-left: 120px;
+  margin-top: 10px;
+
+  @media screen and (max-width: 650px) {
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
+
+.text {
+  color: $c-text;
+  font-weight: 500;
+  margin-left: 50px;
+  margin-bottom: 5px;
+
+  @media screen and (min-width: 850px) and (max-width: 1350px) {
+    font-size: $fs-text;
+  }
+  @media screen and (min-width: 375px) and (max-width: 850px) {
+    margin-left: 40px;
+    font-size: $fs-text;
+    line-height: 18px;
+  }
+}
+
+.block {
+  margin-bottom: 40px;
+  @include paddingRight;
+
+  @media screen and (min-width: 581px) and (max-width: 650px) {
+    padding: 30px;
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: 581px) {
+    padding: 25px 30px;
+    margin-bottom: 0;
+  }
+}
+
+.secondContainer {
+  padding: 30px;
+
+  @media screen and (max-width: 650px) {
+    padding: 0;
+  }
+}
+
+.description {
+  color: $c-white;
+  font-weight: 500;
+  line-height: 26px;
+
+  @media screen and (max-width: 1350px) {
+    font-size: $fs-text;
+  }
+}
+
+.education {
+  max-width: 800px;
+  @include flexCenterHorizontal;
+
+  @media screen and (max-width: 1060px) {
+    max-width: 900px;
+    @include flexCenterVertical;
+  }
+}
+
+.educationPlace {
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+.positionInfo {
+  max-width: 250px;
+}
+
+.position {
+  background-color: $c-bg;
+  color: $c-black;
+  font-size: $fs-little-heading;
+  font-weight: 700;
+  padding: 2px 2px 2px 10px;
+  margin-bottom: 10px;
+
+  @media screen and (max-width: 1350px) {
+    font-size: $fs-main;
+  }
+}
+
+.place {
+  max-width: 500px;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.work {
+  max-width: 850px;
+  @include flexCenterHorizontal;
+  margin-bottom: 40px;
+
+  @media screen and (max-width: 1200px) {
+    @include flexCenterVertical;
+  }
+}
+
+.work:last-of-type {
+  margin-bottom: 20px;
+}
+
+.descriptionBox {
+  max-width: 500px;
+
+  @media screen and (min-width: 1200px) and (max-width: 1350px) {
+    max-width: 400px;
+  }
+
+  @media screen and (min-width: 650px) and (max-width: 1200px) {
+    max-width: 600px;
+  }
+
+  @media screen and (max-width: 650px) {
+    max-width: 600px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.item,
+.text,
+.courses {
+  list-style: none;
+}
+
+.courses {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.description li:before {
+  content: '\2022';
+  color: $c-box;
+  vertical-align: middle;
+  font-size: $fs-heading;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  padding-bottom: 5px;
+}
+
+.link {
+  font-weight: 600;
+  margin-right: 5px;
+  transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link:hover {
+  color: $c-heading;
+  background-color: $c-box;
+}
+
+.headingContainer {
+  position: relative;
+
+  @media screen and (max-width: 581px) {
+    position: static;
+  }
+}
+
+// .nav {
+//   @media screen and (max-width: 581px) {
+//     position: relative;
+//   }
+// }
+
+.langContainer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  @include flexCenterHorizontal;
+  gap: 6px;
+
+  @media screen and (min-width: 581px) and (max-width: 650px) {
+    right: 20px;
+    top: 20px;
+  }
+
+  @media screen and (min-width: 535px) and (max-width: 581px) {
+    right: 20px;
+    top: auto;
+    bottom: 10%;
+  }
+
+  @media screen and (min-width: 500px) and (max-width: 535px) {
+    right: 20px;
+    top: auto;
+    bottom: 17%;
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 500px) {
+    right: 20px;
+    top: auto;
+    bottom: 23%;
+  }
+
+  @media screen and (min-width: 450px) and (max-width: 480px) {
+    right: 20px;
+    top: auto;
+    bottom: 26%;
+  }
+
+  @media screen and (min-width: 425px) and (max-width: 450px) {
+    right: 20px;
+    top: auto;
+    bottom: 31%;
+  }
+
+  @media screen and (min-width: 400px) and (max-width: 425px) {
+    right: 20px;
+    top: auto;
+    bottom: 35%;
+  }
+
+  @media screen and (min-width: 385px) and (max-width: 400px) {
+    right: 20px;
+    top: auto;
+    bottom: 38%;
+  }
+
+  @media screen and (max-width: 385px) {
+    right: 20px;
+    top: auto;
+    bottom: 40%;
+  }
+}
+
+// .verticalLine {
+//   background-color: black;
+//   width: 2px;
+//   height: 17px;
+// }
+
+.el {
+  padding: 2px 3px;
+  list-style-type: none;
+  font-weight: 600;
+  transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.clicked {
+  padding: 2px 3px;
+  color: $c-heading;
+  background-color: $c-box;
+}
+
+.contact {
+  font-weight: 600;
+  transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact:hover {
+    color: $c-heading;
+  background-color: $c-box;
+  padding-left: 2px;
+  padding-right: 2px;
+}
