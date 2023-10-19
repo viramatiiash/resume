@@ -1,7 +1,7 @@
 // ! English
 export const education = [
   {
-    year: 'September 2014 - Mai 2018',
+    year: 'September 2014 - May 2018',
     place: [
       'Vasyl Stefanyk Precarpathian National University',
       'German language and literature',
@@ -79,26 +79,31 @@ export const experience = [
 ];
 
 export const hardSkills = [
-  'HTML',
+  'HTML/Pug',
   'CSS3/SCSS',
   'JavaScript',
-  'Pug',
   'React JS',
-  'Git',
+  'Git/GitHub',
   'Firebase',
+  'Typescript',
+  'Redux',
+  'Node.js',
+  'Webpack',
+  'ESLint',
+  'Babel'
 ];
 
 export const softSkills = [
-  'Communicative skills',
+  'Communication skills',
   'Critical thinking',
   'Attention to details',
   'Effective Time Management',
   'Skills for problem solving',
-  'Be creative',
+  'Creativity',
   'Capacity to work under pressure',
 ];
 
-export const languages = ['Ukrainian', 'English', 'German'];
+export const languages = ['Ukrainian: native', 'English: upper-intermediate', 'German: advanced'];
 
 // ! Ukrainian
 export const educationUkr = [
@@ -173,4 +178,4 @@ export const headingsUkr = [
   'Проєкти',
 ];
 
-export const languagesUkr = ['Українська', 'Англійська', 'Німецька'];
+export const languagesUkr = ['Українська: рідна', 'Англійська: В2', 'Німецька: С1'];

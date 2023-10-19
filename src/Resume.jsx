@@ -17,18 +17,15 @@ import {
   contacts,
   headings,
   headingsUkr,
-  educationUkr
+  educationUkr,
 } from './infos/Infos';
 
+const tabs = {
+  UA: 'UA',
+  ENG: 'ENG',
+};
 
-
-
-  const tabs = {
-    UA: 'UA',
-    ENG: 'ENG',
-  };
-
-  const navList = Object.values(tabs);
+const navList = Object.values(tabs);
 
 const Resume = () => {
   const [tab, setTab] = useState(tabs.ENG);
@@ -48,7 +45,7 @@ const Resume = () => {
                 {contacts.map((contact) => (
                   <div className={styles.text}>
                     <a href={contact.href}>
-                      {contact.name}
+                      {contact.name}{' '}
                       <span className={styles.contact}>{contact.info}</span>
                     </a>
                   </div>
@@ -126,29 +123,11 @@ const Resume = () => {
             <div className={styles.block}>
               <h2 className={styles.heading}>{headingsUkr[4]}</h2>
               <div className={styles.description}>
-                Працьовита і цілеспрямована веб-розробниця початкового рівня зі
-                здатністю навчатися та співпрацювати з більш ніж 1 ріком досвіду
-                розробки веб-сайтів. Мотивована розробляти для клієнтів зручні
-                програми.
+                Працьовита і цілеспрямована веб-розробниця початкового рівня із
+                вмінням вчитися та працювати в команді. Більш ніж 1 рік досвіду
+                розробки веб-сайтів. Мотивована забезпечувати клієнтів зручними
+                аплікаціями.
               </div>
-            </div>
-            <div className={styles.block}>
-              <h2 className={styles.heading}>{headingsUkr[5]}</h2>
-              {educationUkr.map((info) => (
-                <div className={styles.infoBlock}>
-                  <div
-                    className={classNames(styles.description, styles.education)}
-                  >
-                    <div className={styles.year}>{info.year}</div>
-
-                    <div className={styles.educationPlace}>
-                      {info.place.map((place) => (
-                        <div>{place}</div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ))}
             </div>
             <div className={styles.block}>
               <h2 className={styles.heading}>{headingsUkr[6]}</h2>
@@ -165,6 +144,24 @@ const Resume = () => {
                       </li>
                     ))}
                   </ul>
+                </div>
+              ))}
+            </div>
+            <div className={styles.block}>
+              <h2 className={styles.heading}>{headingsUkr[5]}</h2>
+              {educationUkr.map((info) => (
+                <div className={styles.infoBlock}>
+                  <div
+                    className={classNames(styles.description, styles.education)}
+                  >
+                    <div className={styles.year}>{info.year}</div>
+
+                    <div className={styles.educationPlace}>
+                      {info.place.map((place) => (
+                        <div>{place}</div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -292,29 +289,11 @@ const Resume = () => {
             <div className={styles.block}>
               <h2 className={styles.heading}>{headings[4]}</h2>
               <div className={styles.description}>
-                Hardworking and self-motivated Entry-Level Web Developer with
-                ability to learn and collaborate and more than 1 year experience
-                in maintaining websites. Motivated to provide clients with
+                Hardworking and self-motivated Trainee Web Developer with
+                ability to learn and collaborate. More than 1 year experience in
+                maintaining websites. Motivated to provide clients with
                 user-friendly applications.
               </div>
-            </div>
-            <div className={styles.block}>
-              <h2 className={styles.heading}>{headings[5]}</h2>
-              {education.map((info) => (
-                <div className={styles.infoBlock}>
-                  <div
-                    className={classNames(styles.description, styles.education)}
-                  >
-                    <div className={styles.year}>{info.year}</div>
-
-                    <div className={styles.educationPlace}>
-                      {info.place.map((place) => (
-                        <div>{place}</div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ))}
             </div>
             <div className={styles.block}>
               <h2 className={styles.heading}>{headings[6]}</h2>
@@ -331,6 +310,24 @@ const Resume = () => {
                       </li>
                     ))}
                   </ul>
+                </div>
+              ))}
+            </div>
+            <div className={styles.block}>
+              <h2 className={styles.heading}>{headings[5]}</h2>
+              {education.map((info) => (
+                <div className={styles.infoBlock}>
+                  <div
+                    className={classNames(styles.description, styles.education)}
+                  >
+                    <div className={styles.year}>{info.year}</div>
+
+                    <div className={styles.educationPlace}>
+                      {info.place.map((place) => (
+                        <div>{place}</div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
